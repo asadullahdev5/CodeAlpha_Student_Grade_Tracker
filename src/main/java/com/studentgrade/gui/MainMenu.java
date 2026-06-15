@@ -2,6 +2,7 @@ package com.studentgrade.gui;
 import javax.swing.*; // Import all Swing Components
 import java.awt.*;
 
+
 public class MainMenu extends JFrame {
     public static void main (String[] args){
         // Create a Window Container
@@ -19,6 +20,19 @@ public class MainMenu extends JFrame {
         JLabel titleLabel = new JLabel ( "Welcome to Tracker" );
         JButton button1 = new JButton ("Grade Tracker");
         JButton button2 = new JButton ("GPA Tracker");
+
+        // new
+        // Isme purani line hata kar yeh likhein:
+        button1.addActionListener(e -> {
+            new GradeTrackerFrame();
+            System.out.println("Button clicked!");
+        });
+
+        button2.addActionListener(e -> {
+            new GPATrackerFrame ();
+            System.out.println("Button clicked!");
+        });
+
 
         // Add Leaf Component into the Panel
         panel.add(titleLabel);
