@@ -1,6 +1,8 @@
 package com.studentgrade.gui;
 import javax.swing.*; // Import all Swing Components
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class MainMenu extends JFrame {
@@ -21,23 +23,31 @@ public class MainMenu extends JFrame {
         JButton button1 = new JButton ("Grade Tracker");
         JButton button2 = new JButton ("GPA Tracker");
 
-        // new
-        // Isme purani line hata kar yeh likhein:
-        button1.addActionListener(e -> {
-            new GradeTrackerFrame();
-            System.out.println("Button clicked!");
-        });
 
-        button2.addActionListener(e -> {
-            new GPATrackerFrame ();
-            System.out.println("Button clicked!");
-        });
+        button1.addActionListener ( new ActionListener ( ) {
+            @Override
+            public void actionPerformed ( ActionEvent e ) {
+                new GradeTrackerFrame();
+            }
+        } );
+
+        button2.addActionListener ( new ActionListener ( ) {
+            @Override
+            public void actionPerformed ( ActionEvent e ) {
+                new GPATrackerFrame ();
+            }
+        } );
+
+
+
 
 
         // Add Leaf Component into the Panel
         panel.add(titleLabel);
         panel.add ( button1 );
         panel.add ( button2 );
+
+
 
         // Add the populated Jpanel into the JFrame
         frame.add ( panel );

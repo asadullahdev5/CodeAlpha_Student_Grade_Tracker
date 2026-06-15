@@ -1,11 +1,13 @@
 package com.studentgrade.gui;
 
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
-public class GradeTrackerFrame extends JFrame {
-    public static void main (String[] args){
-        JFrame frame = new JFrame ( "Grade Tracker" );
-        frame.setSize ( 400 ,300 );
-        frame.setVisible ( true );
+public class GradeTrackerFrame extends JFrame{
+    public GradeTrackerFrame (){
+        setTitle ( "Grade Tracker");
+        setSize ( 400 ,300 );
+        setLocationRelativeTo ( null );
+        setVisible ( true );
     }
 }
