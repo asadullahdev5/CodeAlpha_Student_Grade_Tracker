@@ -9,7 +9,7 @@ public class MainMenu extends JFrame {
     public static void main (String[] args){
         // Create a Window Container
         JFrame frame = new JFrame ("Academic Perfomance Tracker");
-        frame.setSize ( 300,300 );
+        frame.setSize ( 1000,700 );
         frame.setLocationRelativeTo ( null );
         frame.setDefaultCloseOperation ( JFrame.EXIT_ON_CLOSE );
 
@@ -37,11 +37,6 @@ public class MainMenu extends JFrame {
                 new GPATrackerFrame ();
             }
         } );
-
-
-
-
-
         // Add Leaf Component into the Panel
         panel.add(titleLabel);
         panel.add ( button1 );
