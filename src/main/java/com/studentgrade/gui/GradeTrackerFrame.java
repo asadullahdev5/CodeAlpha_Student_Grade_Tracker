@@ -13,7 +13,7 @@ public class GradeTrackerFrame extends JFrame {
 
     public GradeTrackerFrame () {
         setTitle ( "Grade Tracker" );
-        setSize ( 400 , 300 );
+        setSize ( 700 , 500 );
         setLocationRelativeTo ( null );
         setVisible ( true );
 
